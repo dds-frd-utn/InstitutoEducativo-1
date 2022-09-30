@@ -25,4 +25,29 @@ public class Material {
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_tema")
 	Tema tema;
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public Long getCosto() {
+		return costo;
+	}
+	public void setCosto(Long costo) {
+		this.costo = costo;
+	}
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
+	}
 }
