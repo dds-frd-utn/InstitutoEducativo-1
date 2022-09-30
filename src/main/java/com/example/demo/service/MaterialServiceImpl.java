@@ -26,8 +26,8 @@ public class MaterialServiceImpl implements MaterialService {
 	}
 
 	@Override
-	public Material saveMaterial(Material newPost) {
-		return materialRepository.save(newPost);
+	public Material saveMaterial(Material newMaterial) {
+		return materialRepository.save(newMaterial);
 	}
 
 	@Override

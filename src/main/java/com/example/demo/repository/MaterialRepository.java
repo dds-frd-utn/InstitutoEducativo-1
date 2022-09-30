@@ -13,6 +13,6 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
 
 	void save(Optional<Material> materialToUpdate);
 		
-	@Query(value = "select * from Material as m where m.titulo like :titulo", nativeQuery = true)  
+	@Query(value = "select * from materiales as m where m.titulo like :titulo", nativeQuery = true)  
 	List<Material> findLikeTitulo(@Param("titulo")String title);
 }
