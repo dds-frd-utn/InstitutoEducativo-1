@@ -34,17 +34,17 @@ public class MaterialController {
 		return materialService.findLikeTitulo("%"+titulo+"%");
 	}
 	
-	@RequestMapping(value = "/materiales/agregar", method = RequestMethod.POST, produces = "application/json")
+	@RequestMapping(value = "/materiales/add", method = RequestMethod.POST, produces = "application/json")
 	public Material addPostPost(Material material) {
 		return materialService.saveMaterial(material);
 	}
 
-	@RequestMapping(value = "/materiales/borrar/{id}", method = RequestMethod.DELETE, produces = "application/json")
+	@RequestMapping(value = "/materiales/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
 	public String deleteMaterial(@PathVariable Long id) {
 		return materialService.deleteMaterial(id);
 	}
 	
-	@RequestMapping(value = "/materiales/editar", method = RequestMethod.PUT, produces = "application/json")
+	@RequestMapping(value = "/materiales/update", method = RequestMethod.PUT, produces = "application/json")
 	public String updateMaterial(Material material) {
 		return materialService.updateMaterial(material);
 	}	
