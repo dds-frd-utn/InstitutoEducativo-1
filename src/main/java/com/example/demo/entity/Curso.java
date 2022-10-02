@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
@@ -36,6 +37,10 @@ public class Curso {
     @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JsonIgnoreProperties("curso")
     List<Material> materiales;
+    
+    @ManyToMany(mappedBy = "cursos")
+    @JsonIgnoreProperties("cursos")
+    private List<Alumno> alumnos;
 
 	public Long getId() {
 		return id;
@@ -76,5 +81,12 @@ public class Curso {
 	public void setMateriales(List<Material> materiales) {
 		this.materiales = materiales;
 	}
-	
+
+	public List<Alumno> getAlumnos() {
+		return alumnos;
+	}
+
+	public void setAlumnos(List<Alumno> alumnos) {
+		this.alumnos = alumnos;
+	}
 }
