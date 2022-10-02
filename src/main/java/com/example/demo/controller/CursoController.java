@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.CursoService;
-import com.example.demo.service.MaterialService;
 import com.example.demo.entity.Curso;
-import com.example.demo.entity.Material;
 
 @RestController
 
