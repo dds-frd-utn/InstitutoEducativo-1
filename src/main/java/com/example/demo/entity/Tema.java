@@ -22,7 +22,7 @@ public class Tema {
 	String nombre;
 	@Column(name = "duracion")
 	Long duracion;
-	
+
 	public Long getId() {
 		return id;
 	}
