@@ -9,7 +9,6 @@ import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "material")
@@ -22,10 +21,11 @@ public class Material {
 	String titulo;
 	@Column(name = "costo")
 	Long costo;
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_tema")
-	Tema tema;
-	
+    @JoinColumn(name = "id_curso")
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    private Curso curso;
+
+		
 	public Long getId() {
 		return id;
 	}
@@ -44,10 +44,11 @@ public class Material {
 	public void setCosto(Long costo) {
 		this.costo = costo;
 	}
-	public Tema getTema() {
-		return tema;
+	
+	public Curso getCurso() {
+		return curso;
 	}
-	public void setTema(Tema tema) {
-		this.tema = tema;
+	public void setCurso(Curso curso) {
+		this.curso = curso;
 	}
 }
