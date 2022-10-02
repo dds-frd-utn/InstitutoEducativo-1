@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.service.CursoService;
 import com.example.demo.service.MaterialService;
 import com.example.demo.entity.Curso;
 import com.example.demo.entity.Material;
@@ -36,7 +37,7 @@ public class CursoController {
 //	}
 	
 	@RequestMapping(value = "/cursos/add", method = RequestMethod.POST, produces = "application/json")
-	public Cursos addPostPost(Curso curso) {
+	public Curso addPostPost(Curso curso) {
 		return cursoService.saveCurso(curso);
 	}
 
