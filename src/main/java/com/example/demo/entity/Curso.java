@@ -38,7 +38,7 @@ public class Curso {
     @JsonIgnoreProperties("curso")
     List<Material> materiales;
     
-    @ManyToMany(mappedBy = "cursos")
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "cursos")
     @JsonIgnoreProperties("cursos")
     private List<Alumno> alumnos;
 
