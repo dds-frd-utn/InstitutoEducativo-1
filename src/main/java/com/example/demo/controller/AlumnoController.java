@@ -29,6 +29,10 @@ public class AlumnoController {
 		return alumnoService.findAlumnoById(id);
 	}
 
+	@RequestMapping(value = "/alumnos/{id}/cursos", method = RequestMethod.GET, produces = "application/json")
+	public Optional<Alumno> getCursoAlumno(@PathVariable Long id) {
+		return alumnoService.findAllCurso();
+	}
 	
 	@RequestMapping(value = "/alumnos/add", method = RequestMethod.POST, produces = "application/json")
 	public Alumno addPostPost(Alumno alumno) {
