@@ -12,10 +12,6 @@ public interface CursoService {
 	public Optional<Curso> findCursoById(Long id);
 
 	public Curso saveCurso(Curso newCurso);
-
-	public String deleteCurso(Long id);
-
-	public String updateCurso(Curso curso);
 	
 	public List <Material> getMaterialesByCurso(Long id_curso);
 }

@@ -32,22 +32,6 @@ public class CursoServiceImpl implements CursoService {
 	}
 
 	@Override
-	public String updateCurso(Curso curso) {
-		if (cursoRepository.findById(curso.getId()) != null) {
-			cursoRepository.save(curso);
-			return "OK";
-		}
-		return "ERROR: el id no existe";
-	}
-	@Override
-	public String deleteCurso(Long id) {
-		if (cursoRepository.findById(id) != null) {
-			cursoRepository.deleteById(id);
-			return "OK";
-		}
-		return "ERROR: el id no existe";
-	}
-	@Override
 	public List<Material> getMaterialesByCurso(Long id_curso) {
 		return cursoRepository.getMaterialesByCurso(id_curso);
 	}
