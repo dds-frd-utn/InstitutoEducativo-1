@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.CursoService;
 import com.example.demo.entity.Curso;
+import com.example.demo.entity.Material;
 
 @RestController
 
@@ -50,7 +51,7 @@ public class CursoController {
 	}
 	
 	@RequestMapping(value = "/cursos/{id}/materiales", method = RequestMethod.GET, produces = "application/json")
-	public List<Curso> getMaterialesByCurso(@PathVariable Long id_curso) {
+	public List<Material> getMaterialesByCurso(@PathVariable Long id_curso) {
 		return cursoService.getMaterialesByCurso(id_curso);
 	}
 

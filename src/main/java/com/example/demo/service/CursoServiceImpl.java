@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Curso;
+import com.example.demo.entity.Material;
 import com.example.demo.repository.CursoRepository;
 
 @Service
@@ -45,6 +46,10 @@ public class CursoServiceImpl implements CursoService {
 			return "OK";
 		}
 		return "ERROR: el id no existe";
+	}
+	@Override
+	public List<Material> getMaterialesByCurso(Long id_curso) {
+		return cursoRepository.getMaterialesByCurso(id_curso);
 	}
 
 	
