@@ -20,7 +20,7 @@ public class CursoController {
 	CursoService cursoService;
 	
 	@RequestMapping(value = "/cursos", method = RequestMethod.GET, produces = "application/json")
-	public List<Curso> getCurso() {
+	public List<Curso> getCursos() {
 		return cursoService.findAllCurso();
 	}
 	
