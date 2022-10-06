@@ -25,10 +25,7 @@ public class Alumno {
 	@Column(name = "nombre")
 	String nombre;
 	
-    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE }, fetch = FetchType.LAZY)
-    @JoinTable(name = "alumno_curso_personal", joinColumns = @JoinColumn(name = "id_alumno"), inverseJoinColumns = @JoinColumn(name = "id_curso_personal"))
-    List<Curso> cursos;
-
+  
 	public Long getId() {
 		return id;
 	}
@@ -45,11 +42,4 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 
-	public List<Curso> getCursos() {
-		return cursos;
-	}
-
-	public void setCursos(List<Curso> cursos) {
-		this.cursos = cursos;
-	}
 }
