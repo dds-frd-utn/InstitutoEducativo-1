@@ -33,11 +33,7 @@ public class Curso {
 	Date fecha_inicio;
 	@Column(name = "id_docente")
 	Long id_docente;
-	
-    @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    @JsonIgnoreProperties("curso")
-    List<Material> materiales;
-    
+	    
     
 	public Long getId() {
 		return id;
@@ -70,13 +66,4 @@ public class Curso {
 	public void setId_docente(Long id_docente) {
 		this.id_docente = id_docente;
 	}
-
-	public List<Material> getMateriales() {
-		return materiales;
-	}
-
-	public void setMateriales(List<Material> materiales) {
-		this.materiales = materiales;
-	}
-
 }

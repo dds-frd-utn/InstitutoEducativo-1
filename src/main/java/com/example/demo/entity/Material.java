@@ -23,9 +23,8 @@ public class Material {
 	@Column(name = "costo")
 	Long costo;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
-	@JoinColumn(name = "id_curso")
-	Curso curso;
+	@Column(name = "id_curso")
+    Long id_curso;
 	
 	@Column(name = "stock")
 	Long stock;
@@ -54,12 +53,12 @@ public class Material {
 		this.costo = costo;
 	}
 
-	public Curso getCurso() {
-		return curso;
+	public Long getId_curso() {
+		return id_curso;
 	}
 
-	public void setCurso(Curso curso) {
-		this.curso = curso;
+	public void setId_curso(Long id_curso) {
+		this.id_curso = id_curso;
 	}
 
 	public Long getStock() {
@@ -69,5 +68,6 @@ public class Material {
 	public void setStock(Long stock) {
 		this.stock = stock;
 	}
-
+	
+	
 }
