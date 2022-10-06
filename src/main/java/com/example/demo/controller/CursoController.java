@@ -41,5 +41,10 @@ public class CursoController {
 	  //  System.out.println(id_curso);
 		//return cursoService.getMaterialesByCurso(id_curso);
 	//}
+	
+	@RequestMapping(value = "/cursos/alumnos/{id}", method = RequestMethod.GET, produces = "application/json")
+	public List<Curso> getCursoAlumno(@PathVariable Long id) {
+		return cursoService.findAllCurso(id);
+	}
 
 }

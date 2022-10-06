@@ -35,6 +35,10 @@ public class CursoServiceImpl implements CursoService {
 	//public List<Material> getMaterialesByCurso(Long id_curso) {
 		//return cursoRepository.getMaterialesByCurso(id_curso);
 	//}
+	
+	public List<Curso> findAllCurso(Long id){
+		return cursoRepository.findAllCurso(id);
+	}
 
 	
 }

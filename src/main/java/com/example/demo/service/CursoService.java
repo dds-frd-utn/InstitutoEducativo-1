@@ -14,4 +14,6 @@ public interface CursoService {
 	public Curso saveCurso(Curso newCurso);
 	
 	//public List <Material> getMaterialesByCurso(Long id_curso);
+	
+	public List<Curso> findAllCurso(Long id);
 }
