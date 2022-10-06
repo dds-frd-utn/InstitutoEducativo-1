@@ -1,19 +1,14 @@
 package com.example.demo.entity;
 
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+
 
 @Entity
 @Table(name = "alumnos")
@@ -24,8 +19,9 @@ public class Alumno {
 	Long id;
 	@Column(name = "nombre")
 	String nombre;
-	
-  
+	@Column(name = "fecha_nacimiento")
+	String fecha;
+		
 	public Long getId() {
 		return id;
 	}
@@ -42,4 +38,13 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 
+	public String getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+	
 }
