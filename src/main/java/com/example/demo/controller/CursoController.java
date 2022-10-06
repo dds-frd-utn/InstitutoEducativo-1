@@ -24,7 +24,7 @@ public class CursoController {
 		return cursoService.findAllCurso();
 	}
 	
-	@RequestMapping(value = "/cursos/id/{id}", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/cursos/{id}", method = RequestMethod.GET, produces = "application/json")
 	public Optional<Curso> getCurso(@PathVariable("id") Long id) {
 		return cursoService.findCursoById(id);
 	}
