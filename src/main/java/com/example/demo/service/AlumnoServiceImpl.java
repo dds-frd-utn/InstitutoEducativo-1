@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Alumno;
+import com.example.demo.entity.Curso;
 import com.example.demo.repository.AlumnoRepository;
 
 @Service
@@ -51,6 +52,8 @@ public class AlumnoServiceImpl implements AlumnoService {
 		return "ERROR: el id no existe";
 	}
 
-	
+	public List<Curso> findAllCurso(Long id){
+		return alumnoRepository.findAllCurso(id);
+	}
 
 }

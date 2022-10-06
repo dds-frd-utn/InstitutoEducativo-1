@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.AlumnoService;
 import com.example.demo.entity.Alumno;
+import com.example.demo.entity.Curso;
 
 @RestController  
 
@@ -30,8 +31,8 @@ public class AlumnoController {
 	}
 
 	@RequestMapping(value = "/alumnos/{id}/cursos", method = RequestMethod.GET, produces = "application/json")
-	public Optional<Alumno> getCursoAlumno(@PathVariable Long id) {
-		return alumnoService.findAllCurso();
+	public List<Curso> getCursoAlumno(@PathVariable Long id) {
+		return alumnoService.findAllCurso(id);
 	}
 	
 	@RequestMapping(value = "/alumnos/add", method = RequestMethod.POST, produces = "application/json")
