@@ -38,10 +38,7 @@ public class Curso {
     @JsonIgnoreProperties("curso")
     List<Material> materiales;
     
-    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "cursos")
-    @JsonIgnoreProperties("cursos")
-    private List<Alumno> alumnos;
-
+    
 	public Long getId() {
 		return id;
 	}
@@ -82,11 +79,4 @@ public class Curso {
 		this.materiales = materiales;
 	}
 
-	public List<Alumno> getAlumnos() {
-		return alumnos;
-	}
-
-	public void setAlumnos(List<Alumno> alumnos) {
-		this.alumnos = alumnos;
-	}
 }
