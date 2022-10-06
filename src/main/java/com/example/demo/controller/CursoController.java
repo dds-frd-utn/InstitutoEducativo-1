@@ -38,6 +38,7 @@ public class CursoController {
 	
 	@RequestMapping(value = "/cursos/{id}/materiales", method = RequestMethod.GET, produces = "application/json")
 	public List<Material> getMaterialesByCurso(@PathVariable("id") Long id_curso) {
+	    System.out.println(id_curso);
 		return cursoService.getMaterialesByCurso(id_curso);
 	}
 

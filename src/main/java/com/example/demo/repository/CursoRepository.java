@@ -14,8 +14,8 @@ public interface CursoRepository extends JpaRepository<Curso, Long> {
 
 	void save(Optional<Curso> CursoToUpdate);
 		
-	@Query(value = "select * from materiales as m where m.id_curso = :id", nativeQuery = true)  
-	List<Material> getMaterialesByCurso(@Param("id")Long id_curso);
+	@Query(value = "select * from material as m where m.id_curso = :id", nativeQuery = true)  
+	List<Material> getMaterialesByCurso(@Param("id") Long id_curso);
 }
 
 
