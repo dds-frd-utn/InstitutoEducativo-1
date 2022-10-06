@@ -52,4 +52,8 @@ public class MaterialServiceImpl implements MaterialService {
 	public List<Material> findLikeTitulo(String titulo) {
 		return materialRepository.findLikeTitulo(titulo);
 	}
+	@Override
+	public List<Material> getMaterialesByCurso(Long id_curso) {
+		return materialRepository.getMaterialesByCurso(id_curso);
+	}
 }

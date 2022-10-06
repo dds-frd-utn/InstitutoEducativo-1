@@ -17,4 +17,6 @@ public interface MaterialService {
 	public String updateMaterial(Material material);
 	
 	public List<Material> findLikeTitulo(String titulo);
+	
+	public List <Material> getMaterialesByCurso(Long id_curso);
 }

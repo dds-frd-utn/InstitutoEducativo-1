@@ -15,4 +15,7 @@ public interface MaterialRepository extends JpaRepository<Material, Long> {
 		
 	@Query(value = "select * from material as m where m.titulo like :titulo", nativeQuery = true)  
 	List<Material> findLikeTitulo(@Param("titulo")String title);
+	
+	@Query(value = "select * from material as m where m.id_curso = :id", nativeQuery = true)  
+	List<Material> getMaterialesByCurso(@Param("id") Long id_curso);
 }

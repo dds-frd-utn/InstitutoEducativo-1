@@ -48,4 +48,9 @@ public class MaterialController {
 	public String updateMaterial(Material material) {
 		return materialService.updateMaterial(material);
 	}	
+	@RequestMapping(value = "/materiales/cursos/{id}", method = RequestMethod.GET, produces = "application/json")
+	public List<Material> getMaterialesByCurso(@PathVariable("id") Long id_curso) {
+	    System.out.println(id_curso);
+		return materialService.getMaterialesByCurso(id_curso);
+	}
 }
