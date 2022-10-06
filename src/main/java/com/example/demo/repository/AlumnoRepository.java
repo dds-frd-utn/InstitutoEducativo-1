@@ -17,4 +17,3 @@ public interface AlumnoRepository extends JpaRepository<Alumno, Long> {
 	@Query(value = "select c.id, c.nombre, c.id_tema, c.fecha_inicio, c.id_docente from cursos_personales as cp join alumno_curso_personal as acp on cp.id = acp.id_curso_personal INNER JOIN cursos AS c ON cp.id_curso = c.id where acp.id_alumno=:id", nativeQuery = true)
 	List<Curso> findAllCurso(@Param("id") Long id);
 }
-	
