@@ -35,7 +35,7 @@ public class CursoController {
 //	}
 	
 	@RequestMapping(value = "/cursos/add", method = RequestMethod.POST, produces = "application/json")
-	public Curso addPostPost(Curso curso) {
+	public Curso addCurso(Curso curso) {
 		return cursoService.saveCurso(curso);
 	}
 
@@ -47,5 +47,11 @@ public class CursoController {
 	@RequestMapping(value = "/cursos/update", method = RequestMethod.PUT, produces = "application/json")
 	public String updateCurso(Curso curso) {
 		return cursoService.updateCurso(curso);
-	}	
+	}
+	
+	@RequestMapping(value = "/cursos/{id}/materiales", method = RequestMethod.GET, produces = "application/json")
+	public List<Curso> getMaterialesByCurso(@PathVariable Long id_curso) {
+		return cursoService.getMaterialesByCurso(id_curso);
+	}
+
 }
