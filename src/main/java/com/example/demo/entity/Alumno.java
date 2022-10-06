@@ -20,7 +20,7 @@ public class Alumno {
 	@Column(name = "nombre")
 	String nombre;
 	@Column(name = "fecha_nacimiento")
-	String fecha;
+	String fecha_nacimiento;
 		
 	public Long getId() {
 		return id;
@@ -38,12 +38,12 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 
-	public String getFecha() {
-		return fecha;
+	public String getFecha_nacimiento() {
+		return fecha_nacimiento;
 	}
 
-	public void setFecha(String fecha) {
-		this.fecha = fecha;
+	public void setFecha_nacimiento(String fecha) {
+		this.fecha_nacimiento = fecha;
 	}
 
 	
